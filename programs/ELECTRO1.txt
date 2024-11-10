@@ -1,0 +1,797 @@
+AxesOff
+ViewWindow 0,126,127,0,62,63
+Lbl 0
+Cls
+Green Text 1,5,"×ELECTRONIQUE DE PUISSANCE×"
+Orange Text 7,5,"~~~~~~BY Yann39~~~~~~~"
+Text 19,5,"[1] : LE TRANSISTOR BIPOLAIRE"
+Text 25,5,"[2] : LE RELAIS STATIQUE"
+Text 31,5,"[3] : LES TRIACS/THYRISTORS"
+Text 37,5,"[4] : LES GRADATEURS"
+Text 43,5,"[5] : FCT MODULER L'ENERGIE"
+Do
+GetKey→A
+LpWhile A=0
+Cls
+A=72⇒Goto 1
+A=62⇒Goto 2
+A=52⇒Goto 3
+A=73⇒Goto 4
+A=63⇒Goto 5
+A≠72⇒A≠62⇒A≠52⇒A≠73⇒A≠63⇒Goto Z
+Lbl Z
+Orange Text 30,20,"MAUVAISE TOUCHE TAPEE"
+Orange Text 36,40,"PRESS [EXE]"
+Cls
+Goto 0
+Lbl 3
+Orange Text 1,1,"FONCTION ET ROLE:"
+Green Text 7,1,"THYRISTOR:"
+Text 13,1,"INT COMMANDE UNIDIRECTIONNEL,"
+Text 19,1,"PR COMMUTATION D'ENERGIE EN ~"
+Green Text 25,1,"TRIAC:"
+Text 31,1,"INT COMMANDE BIDIRECTIONNEL,"
+Text 37,1,"PR COMMUTATION D'ENERGIE EN ~"
+Orange Text 43,1,"CONSTITUTION:"
+Text 49,1,"SEMI-CONDUCTEUR,"
+Text 55,1,"(SOUVENT SILICIUM)"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"1/6"
+Cls
+Orange Text 1,38,"SYMBOLES:"
+Green Text 7,8,"THYRISTOR:"
+Green Text 7,73,"TRIAC:"
+F-Line 25,40,25,48
+F-Line 22,40,28,40
+F-Line 22,34,28,34
+F-Line 22,40,25,34
+F-Line 28,40,25,34
+F-Line 25,26,25,34
+F-Line 25,34,21,29
+F-Line 16,29,21,29
+Text 16,29,"A"
+Text 32,29,"K"
+Text 28,16,"G"
+Green F-Line 16,26,23,22
+Green F-Line 16,24,16,26
+Green F-Line 16,26,18,26
+Green F-Line 34,25,34,40
+Green F-Line 33,39,35,39
+Green Text 37,5,"VGT"
+Green Text 28,37,"VAT"
+Text 46,1,"A:ANODE"
+Text 52,1,"K:CATHODE"
+Text 58,1,"G:GACHETTE"
+F-Line 83,40,83,48
+F-Line 77,40,89,40
+F-Line 77,34,89,34
+F-Line 77,40,80,34
+F-Line 83,40,80,34
+F-Line 83,26,83,34
+F-Line 80,34,76,29
+F-Line 71,29,76,29
+F-Line 86,40,83,34
+F-Line 86,40,89,34
+Green F-Line 71,26,78,22
+Green F-Line 71,24,71,26
+Green F-Line 71,26,73,26
+Green F-Line 93,25,93,40
+Green F-Line 92,39,94,39
+Green Text 37,59,"VGT"
+Green Text 28,96,"VAT"
+Text 16,87,"A2"
+Text 32,87,"A1"
+Text 28,71,"G"
+Text 46,65,"A1:ANODE 1"
+Text 52,65,"A2:ANODE 2"
+Text 58,65,"G:GACHETTE"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"2/6"
+Cls
+Orange Text 1,1,"CRITERES DE CHOIX:"
+Green Text 7,1,"THYRISTOR:"
+Text 13,3,"-I A COMMUTER (IMOY OU IEFF)"
+Text 19,3,"-U AUX BORNES DU COMPOSANT A"
+Text 25,5,"L'ETAT BLOQUE (VRRM OU VDRM)"
+Green Text 31,1,"TRIAC:"
+Text 37,3,"-IMOY OU IEFF VRAI"
+Text 43,3,"-U A L'ETAT BLOQUE"
+Text 49,3,"-QUADRANTS DE FONCTIONNEMENT"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"3/6"
+Cls
+Orange Text 1,1,"APPLICATIONS:"
+Green Text 7,1,"TRIACS:"
+Text 13,1,"-INT COMMANDE POUR COMMANDE"
+Text 19,5,"DE PUISSANCE TOR"
+Text 25,1,"-GRADATEUR POUR MODULATION"
+Text 31,5,"D'ENERGIE"
+Green Text 37,1,"THYRISTORS:"
+Text 43,5,"MEMES APPLICATIONS QUE LE"
+Text 49,5,"TRIAC MAIS EGALEMENT"
+Text 55,5,"REDRESSEUR COMMANDE"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"4/6"
+Cls
+Orange Text 1,7,"FONCTIONNEMENT THYRISTOR:"
+Text 7,1,"MISE EN CONDUCTION, 2 CONDITIO"
+Text 13,1,"NS DOIVENT ETRES SATISFAITES:"
+Text 19,1,"-TENSION VAK POSITIVE"
+Text 25,1,"-TENSION DE GACHETTE"
+Text 31,1,"(IMPULSION SUFISAMENT LONGUE)"
+Text 43,1,"LE BLOCAGE S'EFFECTUE TOUT"
+Text 49,1,"SIMPLEMENT AU 0 SECTEUR"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"5/6"
+Cls
+Orange Text 1,11,"FONCTIONNEMENT TRIAC:"
+Text 7,1,"MISE EN CONDUCTION, 2 CONDITIO"
+Text 13,1,"NS DOIVENT ETRES SATISFAITES:"
+Text 19,1,"-TENSION VT≠0 (EN POS OU NEG)"
+Text 25,1,"-TENSION DE GACHETTE"
+Text 31,1,"(IMPULSION SUFISAMENT LONGUE)"
+Text 43,1,"LE BLOCAGE S'EFFECTUE NATURELE"
+Text 49,1,"MENT PROCHE DU 0 SECTEUR"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"6/6"
+Cls
+Goto 0
+Lbl 2
+Orange Text 1,1,"FONCTION ET ROLE:"
+Text 7,1,"Commuter l'energie en integr"
+Text 13,1,"ant une fonction d'isolation"
+Text 19,1,"galvanique generalement real"
+Text 25,1,"iser par un etage photocoupl"
+Text 31,1,"eur (diode + phototransistor)"
+Text 37,1,"Role: Commande d'actionneurs"
+Text 43,1,"ou de preactionneurs."
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"1/7"
+Cls
+Orange Text 1,1,"CONSTITUTION:"
+Text 7,1,"Il est constitue d'un etage"
+Text 13,1,"d'entree photocoupleur et"
+Text 19,1,"d'un etage de sortie:"
+Text 25,10,"-Transistor si continu"
+Text 31,10,"-Triac/thyristor si ~"
+Orange Text 49,1,"SYMBOLES:  →"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"2/7"
+Cls
+Orange Text 1,1,"ETAGE DE SORTIE TRIAC/THYRISTOR"
+F-Line 68,26,62,20
+F-Line 81,26,89,36
+F-Line 81,26,73,36
+F-Line 78,26,70,36
+F-Line 62,26,70,36
+F-Line 60,26,92,26
+F-Line 60,36,92,36
+F-Line 76,48,76,36
+F-Line 76,26,76,14
+F-Line 20,50,100,50
+F-Line 20,12,100,12
+F-Line 20,12,20,50
+F-Line 100,12,100,50
+F-Line 5,45,20,45
+F-Line 5,17,20,17
+F-Line 100,45,115,45
+F-Line 100,17,115,17
+Green F-Line 10,20,10,42
+Green F-Line 9,41,11,41
+Green F-Line 110,20,110,42
+Green F-Line 109,41,111,41
+Green Text 25,15,"V"
+Green Text 31,15,"I"
+Green Text 37,15,"N"
+Green Text 22,115,"V"
+Green Text 28,115,"O"
+Green Text 34,115,"U"
+Green Text 40,115,"T"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"3/7"
+Cls
+Orange Text 1,7,"ETAGE DE SORTIE TRANSISTOR"
+F-Line 66,41,66,21
+F-Line 51,31,66,31
+F-Line 66,33,76,41
+F-Line 66,29,76,21
+F-Line 76,48,76,41
+F-Line 76,21,76,14
+F-Line 20,50,100,50
+F-Line 20,12,100,12
+F-Line 20,12,20,50
+F-Line 100,12,100,50
+F-Line 5,45,20,45
+F-Line 5,17,20,17
+F-Line 100,45,115,45
+F-Line 100,17,115,17
+Green F-Line 10,20,10,42
+Green F-Line 9,41,11,41
+Green F-Line 110,20,110,42
+Green F-Line 109,41,111,41
+Green Text 25,15,"V"
+Green Text 31,15,"I"
+Green Text 37,15,"N"
+Green Text 22,115,"V"
+Green Text 28,115,"O"
+Green Text 34,115,"U"
+Green Text 40,115,"T"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"4/7"
+Cls
+Orange Text 1,1,"CARACTERISTIQUES TECHNOLOGIQUES:"
+Green Text 7,1,"EN ENTREE:"
+Text 13,1,"TYPE DE COMMANDE CONTINUE OU"
+Text 19,1,"ALTERNATIVE, PLAGE DE TENSION,"
+Text 25,1,"TYPE DE COUPLAGE."
+Green Text 31,1,"EN SORTIE:"
+Text 37,1,"TYPE DE TENSION, PLAGES,"
+Text 43,1,"COURANT NOMINAL."
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"5/7"
+Cls
+Orange Text 1,1,"CRITERE DE CHOIX:"
+Text 7,1,"-TENSION DE COMMANDE"
+Text 13,1,"-TENSION DE CHARGE"
+Text 19,1,"-COURANT A COMMUTE"
+Green Text 31,1,"EX: COMMANDE D'UNE LAMPE"
+Text 37,1,"P=100W N=0.6 VCOM=24V U=230V"
+Text 43,1,"PA=PU/N=100/0.6=166.7W"
+Text 49,1,"I=P/U=166.7/24=0.726A"
+Text 55,1,"DONC ON CHOISIE MP240D4"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"6/7"
+Cls
+Orange Text 1,1,"MODES DE COMMANDE:"
+Green Text 7,1,"COMMANDE SYNCHRONE:"
+Text 13,1,"CHARGE ALIMENTEE DES QU'ON LUI"
+Text 19,1,"DONNE L'ORDRE DE COMMUTER,"
+Text 25,1,"C'EST LE CAS EN CONTINU."
+Green Text 37,1,"COMMANDE ASYNCHRONE:"
+Text 43,1,"LA COMMUTATION S'EFFECTUE A"
+Text 49,1,"TENSION NULLE."
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"7/7"
+Cls
+Goto 0
+Lbl 1
+Orange Text 1,5,"FONCTION ET ROLE:"
+Text 7,5,"Fonction amPlification lineai"
+Text 13,5,"re ou commutation (interrupt"
+Text 19,5,"eur commande). Son role sera"
+Text 25,5,"de realiser le lien entre une"
+Text 31,5,"partie commande (faible puiss"
+Text 37,5,"ance) et les preactionneurs."
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"1/6"
+Orange Text 55,5,"       PRESS [EXE]"
+Cls
+F-Line 20,35,20,15
+F-Line 5,25,20,25
+F-Line 20,27,30,35
+F-Line 20,23,30,15
+F-Line 30,42,30,35
+F-Line 30,15,30,8
+Text 33,3,"B"
+Text 53,35,"E"
+Text 17,35,"C"
+Orange Text 2,1,"SYMBOLE:"
+Orange F-Line 10,15,25,8
+Orange F-Line 10,15,10,12
+Orange F-Line 10,15,14,16
+Orange Text 55,5,"VBE"
+Orange F-Line 36,35,36,15
+Orange F-Line 36,35,33,30
+Orange F-Line 36,35,39,30
+Orange Text 35,40,"VCE"
+Green F-Line 10,23,14,25
+Green F-Line 10,27,14,25
+Green Text 30,10,"IB"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"2/6"
+Text 7,60,"B:Base"
+Text 13,60,"C:Collecteur"
+Text 19,60,"E:Emetteur"
+F-Line 28,19,30,16
+F-Line 26,15,30,15
+Green Text 32,65,"IE=IB+IC"
+Green F-Line 28,42,30,38
+Green F-Line 32,42,30,37
+Green Text 19,20,"IC"
+Green Text 44,65,"IC=Beta×IB"
+Cls
+Orange Text 1,1,"CARACTERISTIQUE TECHNOLOGIQUE:"
+Text 7,1,"2 TYPES DE TRANSISTORS:"
+Text 13,10,"-PETITS SIGNAUX (IC<1A)"
+Text 19,10,"-PUISSANCE (IC>1A)"
+Orange Text 31,1,"CRITERES DE CHOIX:"
+Text 37,10,"-VCE0: VCEmax BLOQUE"
+Text 43,10,"-IC: COURANT COMMUTE"
+Text 49,10,"-POLARITE"
+Text 49,55,"-hFE"
+Orange Text 57,1,"MONTAGES CLASSIQUES  →"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"3/6"
+Cls
+Green Text 1,1,"MONTAGE A RESISTANCE DE BASE:"
+F-Line 35,35,35,15
+F-Line 20,25,35,25
+F-Line 35,27,45,35
+F-Line 35,23,45,15
+F-Line 45,42,45,35
+F-Line 45,15,45,5
+Text 33,3,"B"
+Text 50,40,"E"
+Text 23,40,"C"
+Text 15,31,"KA"
+Text 30,13,"RB"
+F-Line 39,43,39,48
+F-Line 51,43,51,48
+F-Line 39,43,51,43
+F-Line 39,48,51,48
+F-Line 45,53,45,48
+F-Line 30,53,60,53
+F-Line 20,27,11,27
+F-Line 20,23,11,23
+F-Line 11,27,11,23
+F-Line 20,27,20,23
+F-Line 5,25,11,25
+F-Line 45,15,45,8
+F-Line 30,5,60,5
+Orange Text 8,15,"+24V"
+Orange Text 56,22,"0V"
+Orange F-Line 5,20,5,5
+Orange Text 48,10,"VCOM"
+Orange F-Line 5,20,3,17
+Orange F-Line 5,20,7,17
+Text 13,65,"-SI VCOM=0V:"
+Text 19,60,"T1 BLOQUE"
+Text 25,60,"KA NON ALIMENTE"
+Text 37,65,"-SI VCOM=5V:"
+Text 43,60,"T1 SATURE"
+Text 49,60,"KA ALIMENTE"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"4/6"
+Cls
+Green Text 1,1,"MONTAGE A PONT DE POLARISATION:"
+F-Line 35,35,35,15
+F-Line 20,25,35,25
+F-Line 35,27,45,35
+F-Line 35,23,45,15
+F-Line 45,42,45,35
+F-Line 45,15,45,5
+Text 31,28,"B"
+Text 50,40,"E"
+Text 23,40,"C"
+Text 15,31,"KA"
+F-Line 39,43,39,48
+F-Line 51,43,51,48
+F-Line 39,43,51,43
+F-Line 39,48,51,48
+F-Line 45,53,45,48
+F-Line 30,53,60,53
+F-Line 45,15,45,8
+F-Line 10,5,60,5
+F-Line 20,20,20,30
+F-Line 20,40,20,45
+F-Line 20,45,10,45
+F-Line 20,10,20,5
+F-Line 18,40,22,40
+F-Line 18,20,22,20
+F-Line 18,30,22,30
+F-Line 18,10,22,10
+F-Line 18,10,18,20
+F-Line 18,30,18,40
+F-Line 22,10,22,20
+F-Line 22,30,22,40
+Orange Text 8,15,"+24V"
+Orange Text 56,2,"0V"
+Orange F-Line 5,40,5,15
+Orange Text 28,10,"V"
+Orange Text 34,10,"C"
+Orange Text 40,10,"O"
+Orange Text 46,10,"M"
+Orange F-Line 5,40,3,37
+Orange F-Line 5,40,7,37
+Text 13,65,"-SI VCOM=0V:"
+Text 19,60,"T1 BLOQUE"
+Text 25,60,"KA NON ALIMENTE"
+Text 37,65,"-SI VCOM=5V:"
+Text 43,60,"T1 SATURE"
+Text 49,60,"KA ALIMENTE"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"5/6"
+Cls
+Green Text 1,15,"MONTAGE DARLINGTON:"
+F-Line 55,10,55,30
+F-Line 40,20,55,20
+F-Line 55,18,65,10
+F-Line 55,22,65,30
+F-Line 40,20,40,30
+F-Line 40,30,30,38
+F-Line 30,30,30,50
+F-Line 30,42,40,50
+F-Line 15,40,30,40
+F-Line 65,10,65,3
+F-Line 65,30,65,55
+F-Line 40,50,65,50
+Green Text 25,10,"IB1"
+Green Text 55,70,"IC2"
+Text 16,25,"B"
+Text 8,35,"C"
+Text 33,35,"E"
+Text 37,50,"B"
+Text 29,60,"C"
+Text 54,60,"E"
+Text 12,72,"PERMET UNE"
+Text 18,72,"PLUS GRANDE"
+Text 24,72,"AMPLIFICATION"
+Text 30,72,"DU COURANT"
+Orange Text 50,1,"IC2=BETA1"
+Orange Text 56,1,"×BETA2×IB1"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"6/6"
+Cls
+Goto 0
+Lbl 4
+Orange Text 1,15,"GRADATEUR TRAIN D'ONDES"
+Orange Text 7,30,"(POUR CHAUFFAGE)"
+Green Text 13,1,"1-PRINCIPE:"
+Text 19,1,"AVEC CE TYPE DE GRADATEUR, ON"
+Text 25,1,"NE MODULE PAS LA PUISSANCE MA"
+Text 31,1,"IS ON TRAVAIL SUR L'ENERGIE EN"
+Text 37,1,"VOYEE VERS LA CHARGE. CE GRADAT"
+Text 43,1,"EUR EST APPELE GRADATEUR TRAIN"
+Text 49,1,"D'ONDES (GENERALEMENT ENTIERES"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 126,7,106,7
+Text 58,112,"1/7"
+Cls
+Green Text 1,1,"2-INTERET:"
+Text 7,1,"TRES PEU DE NUISANCES (HARMONI"
+Text 13,1,"QUES DE COURANT, PERTURBATIONS"
+Text 19,1,"ELECTROMAGNETIQUES), MAINTENAN"
+Text 25,1,"CE FACILE."
+Text 31,1,"L'INCONVENIENT MAJEUR EST QUE"
+Text 37,1,"LE SYSTEME DOIT ETRE A FORTE IN"
+Text 43,1,"ERTIE (TYPE CHAUFFAGE)"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"2/7"
+Cls
+Text 1,1,"LA STRUCTURE DE BASE UTILISEE"
+Text 7,1,"EST UN GRADATEUR DE TENSION"
+Green Text 13,1,"SOIT MONOPHASE:"
+F-Line 60,35,86,35
+F-Line 60,15,86,15
+F-Line 60,35,60,28
+F-Line 86,35,86,28
+F-Line 60,22,60,15
+F-Line 86,22,86,15
+F-Line 73,35,73,42
+F-Line 73,15,73,8
+F-Line 57,28,63,28
+F-Line 57,22,63,22
+F-Line 83,28,89,28
+F-Line 83,22,89,22
+F-Line 60,28,57,22
+F-Line 60,28,63,22
+F-Line 86,22,83,28
+F-Line 86,22,89,28
+F-Line 50,8,73,8
+F-Line 30,8,38,8
+F-Line 38,9,50,9
+F-Line 38,7,50,7
+F-Line 30,8,30,35
+Text 58,34,"R CHARGE"
+Text 22,20,"NEUTRE"
+Text 15,71,"L1"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"3/7"
+Cls
+Green Text 1,1,"SOIT TRIPHASE:"
+F-Line 90,41,116,41
+F-Line 90,21,116,21
+F-Line 90,41,90,34
+F-Line 116,41,116,34
+F-Line 90,28,90,21
+F-Line 116,28,116,21
+F-Line 103,41,103,48
+F-Line 103,21,103,14
+F-Line 102,14,102,5
+F-Line 104,14,104,5
+F-Line 103,5,103,2
+F-Line 10,2,103,2
+F-Line 87,34,93,34
+F-Line 87,28,93,28
+F-Line 113,34,119,34
+F-Line 113,28,119,28
+F-Line 90,34,87,28
+F-Line 90,34,93,28
+F-Line 116,28,113,34
+F-Line 116,28,119,34
+Text 9,101,"L1"
+F-Line 126,7,126,0
+F-Line 107,7,107,0
+F-Line 107,7,126,7
+Text 58,112,"3/7"
+F-Line 56,41,82,41
+F-Line 56,21,82,21
+F-Line 56,41,56,34
+F-Line 82,41,82,34
+F-Line 56,28,56,21
+F-Line 82,28,82,21
+F-Line 69,41,69,48
+F-Line 69,21,69,14
+F-Line 68,14,68,5
+F-Line 70,14,70,5
+F-Line 69,5,69,2
+F-Line 53,34,59,34
+F-Line 53,28,59,28
+F-Line 79,34,85,34
+F-Line 79,28,85,28
+F-Line 56,34,53,28
+F-Line 56,34,59,28
+F-Line 82,28,79,34
+F-Line 82,28,85,34
+Text 9,67,"L2"
+F-Line 22,41,48,41
+F-Line 22,21,48,21
+F-Line 22,41,22,34
+F-Line 48,41,48,34
+F-Line 22,28,22,21
+F-Line 48,28,48,21
+F-Line 35,41,35,48
+F-Line 35,21,35,14
+F-Line 34,14,34,5
+F-Line 36,14,36,5
+F-Line 35,5,35,2
+F-Line 19,34,25,34
+F-Line 19,28,25,28
+F-Line 50,34,46,34
+F-Line 45,28,51,28
+F-Line 22,34,19,28
+F-Line 22,34,25,28
+F-Line 48,28,45,34
+F-Line 48,28,51,34
+Text 9,33,"L3"
+F-Line 10,2,10,48
+Text 9,9,"N"
+Text 51,31,"R"
+Text 51,65,"R"
+Text 51,99,"R"
+Cls
+Green Text 1,1,"3-SCHEMA FONCTIONNEL:"
+F-Line 10,15,10,50
+F-Line 10,15,55,15
+F-Line 10,50,55,50
+F-Line 55,15,55,50
+F-Line 120,15,120,50
+F-Line 75,15,75,50
+F-Line 75,15,120,15
+F-Line 75,50,120,50
+F-Line 10,41,1,41
+F-Line 10,25,1,25
+F-Line 55,33,75,33
+F-Line 73,32,73,34
+F-Line 110,15,110,12
+F-Line 85,15,85,12
+F-Line 98,15,98,12
+F-Line 110,4,110,1
+F-Line 98,4,98,1
+F-Line 85,4,85,1
+F-Line 109,12,109,4
+F-Line 111,12,111,4
+F-Line 97,12,97,4
+F-Line 99,12,99,4
+F-Line 84,12,84,4
+F-Line 86,12,86,4
+F-Line 85,1,110,1
+F-Line 110,50,110,55
+F-Line 98,50,98,55
+F-Line 85,50,85,55
+F-Line 85,53,43,53
+F-Line 43,53,43,50
+F-Line 30,55,30,50
+Text 58,116,"5/7"
+F-Line 113,7,113,0
+F-Line 126,7,113,7
+Text 7,33,"N"
+Text 7,88,"L1"
+Text 7,101,"L2"
+Text 7,113,"L3"
+Green F-Line 3,28,3,38
+Green F-Line 2,37,4,37
+Green Text 29,6,"U"
+Green Text 53,6,"U:0-10V"
+Text 20,15,"MODULE DE"
+Text 35,15,"COMMANDE"
+Text 20,80,"MODULE DE"
+Text 35,80,"PUISSANCE"
+Text 53,60,"CHARGE"
+Cls
+Green Text 1,1,"MODULE DE COMMANDE:"
+Text 7,1,"ON Y TROUVE UNE ELECTRONIQUE D"
+Text 13,1,"E COMMANDE ASSEZ ELABOREE QUI"
+Text 19,1,"PREND EN COMPTE LES INFOS DE C"
+Text 25,1,"OMMANDE (SOUVENT 0-10V) ET QUI"
+Text 31,1,"GENERE LES IMPULSIONS DE GACHE"
+Text 37,1,"TTE EN SORTIE. EGALEMENT, PRIS"
+Text 43,1,"E EN COMPTE DE SECURITE (CABLE,"
+Text 49,1,"THERMIQUE)."
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"6/7"
+Cls
+Green Text 1,1,"MODULE DE PUISSANCE:"
+Text 7,1,"ON Y TROUVE UN THYRISTOR TETE-"
+Text 13,1,"BECHE POUR MONO OU TRIPHASE."
+Orange Text 25,1,"4-CRITERES DE CHOIX:"
+Text 31,5,"-PUISSANCE RESEAU"
+Text 37,5,"-TENSION RESEAU"
+Text 43,5,"-TYPE DE COMMANDE"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"7/7"
+Cls
+Goto 0
+Lbl 5
+Orange Text 1,9,"FONCTION MODULER L'ENERGIE"
+Text 13,1,"CETTE FCT REGROUPE DIFFERENTES"
+Text 19,1,"FCTS DE L'ELECTRONIQUE:"
+Text 25,5,"-GRADATEUR"
+Text 25,55,"-HACHEUR"
+Text 31,5,"-ONDULEUR"
+Text 31,55,"-REDRESSEUR"
+Text 37,1,"ELLES SONT UTILISEES POUR L'ASS"
+Text 43,1,"ERVISSEMENT, LA VARIATION OU L"
+Text 49,1,"A REGULATION DANS TOUT LES DOM"
+Text 55,1,"AINES (VITESSE, ETC...)"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"1/2"
+Cls
+Green Text 1,11,"VARIATION, REGULATION OU"
+Green Text 7,31,"ASSERVISSEMENT:"
+Text 25,5,"[1] : DE TEMPERATURE"
+Text 31,5,"[2] : DE VITESSE"
+Text 37,5,"[3] : DE POSITION"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"2/2"
+Do
+GetKey→B
+LpWhile B=0
+Cls
+B=72⇒Goto A
+B=62⇒Goto B
+B=52⇒Goto C
+B≠72⇒B≠62⇒B≠52⇒Goto Z
+Lbl A
+Orange Text 1,11,"VARIATION, REGULATION DE"
+Orange Text 7,40,"TEMPERATURE"
+Text 19,1,"LA VARIATION/REGULATION DE TEM"
+Text 25,1,"PERATURE S'EFFECTUE A L'AIDE DE"
+Text 31,1,"MODULATEUR D'ENERGIE REALISE P"
+Text 37,1,"AR DES GRADATEURS, SOIT ANGLE D"
+Text 43,1,"E PHASE, SOIT TRAIN D'ONDES."
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"1/5"
+Cls
+Green Text 1,1,"GRADATEUR PAR DEPHASAGE:"
+F-Line 35,20,35,40
+F-Line 70,20,70,40
+F-Line 35,20,70,20
+F-Line 35,40,70,40
+F-Line 35,20,70,40
+F-Line 25,30,35,30
+F-Line 70,30,80,30
+Text 28,43,"~"
+Text 35,61,"U"
+Text 26,1,"TENSION"
+Text 32,5,"SINUS"
+Text 26,86,"TENSION"
+Text 32,84,"DECOUPEE"
+Text 55,15,"EXPLICATIONS :    →"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"2/5"
+Cls
+Text 1,1,"IL FOURNIT A PARTIR DU RESEAU"
+Text 7,1,"ALTERNATIF MONO OU TRI UNE TE"
+Text 13,1,"NSION ALTERNATIVE DE VALEUR EFF"
+Text 19,1,"ICACE VARIABLE ET DE FREQUENCE"
+Text 25,1,"FIXE PAR MODULATION DE L'ANGLE"
+Text 31,1,"D'AMORCAGE DES SEMI-CONDUCTEUR"
+Text 37,1,"S (TRIACS OU THYRISTORS) VOIR"
+Text 43,1,"CARTE TCA."
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"3/5"
+Cls
+Green Text 1,1,"GRADATEUR TRAIN D'ONDES:"
+F-Line 35,20,35,40
+F-Line 70,20,70,40
+F-Line 35,20,70,20
+F-Line 35,40,70,40
+F-Line 35,20,70,40
+F-Line 25,30,35,30
+F-Line 70,30,80,30
+Text 28,43,"~"
+Text 35,61,"U"
+Text 26,1,"TENSION"
+Text 32,5,"SINUS"
+Text 26,77,"TRAIN ONDE"
+Text 32,87,"SINUS"
+Text 55,15,"EXPLICATIONS :     →"
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"4/5"
+Cls
+Text 1,1,"IL FOURNIT A PARTIR DU RESEAU"
+Text 7,1,"ALTERNATIF MONO OU TRIPHASE UN"
+Text 13,1,"E ENERGIE VARIABLE PAR ENVOI DE"
+Text 19,1,"RAFALES DE PERIODES ENTIERES CO"
+Text 25,1,"NSECUTIVES SEPAREES PAR DES ABS"
+Text 31,1,"ENCES TOTALS DE TENSION A UN R"
+Text 37,1,"YTHME MODULABLE (VOIR GRADIPAK)"
+Green Text 43,1,"EXEMPLES DE MODULATEURS:"
+Text 49,1,"TCA, GRADIPAK, THYRITOP, EUROTH"
+Text 55,1,"ERM..."
+F-Line 126,7,126,0
+F-Line 106,7,106,0
+F-Line 106,7,126,7
+Text 58,112,"5/5"
+Cls
+Goto 0
