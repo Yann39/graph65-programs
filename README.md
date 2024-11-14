@@ -1,6 +1,6 @@
 # Graph 65 calculator programs
 
-Some **BASIC** programs I wrote for my **Casio Graph 65** calculator when I was in high school.
+Some **Casio BASIC** programs I wrote many years ago for my **Casio Graph 65** calculator.
 
 ![Version](https://img.shields.io/badge/Version-1.0.0-2AAB92.svg)
 ![Static Badge](https://img.shields.io/badge/Last%20update-09%20Nov%202024-blue)
@@ -60,9 +60,17 @@ It was designed for ease of use in mathematical and scientific calculations and 
    - Earthing systems
    - Choosing a differential
 
+## Mathematics
+
+- :page_facing_up: _LIMITETA.fxi_ : Data sheet about limits :
+  - Sum of functions' table
+  - Product of functions' table
+  - Quotient of functions' table
+  - Theorems
+
 # Usage
 
-You can use the **FX-Interface** software to view/edit the _FXI_ files and transfer them to the calculator (through cable).
+You can use the **FX-Interface** or **Fxi interface Pro** software to view/edit the _FXI_ files and transfer them to the calculator (through cable).
 
 Then navigate to the _Programs_ menu on the calculator to run them.
 

@@ -1,0 +1,178 @@
+BG-None
+0⇒B
+ViewWindow 0,126,127,0,62,63
+Lbl 0
+Green Text 1,5,"~~~~~~By Yann39~~~~~~ "
+Text 19,5,"[1] : TABLEAU ADDITION"
+Text 25,5,"[2] : TABLEAU MULTIPLICATION"
+Text 31,5,"[3] : TABLEAU DIVISION"
+Text 37,5,"[4] : THEOREMES"
+Orange Text 55,5,"         PRESS [EXE]"
+Lbl Î
+ClrGraph
+ViewWindow 0,126,0,0,62,0
+"Choix ?"
+?⇒A
+A=1⇒Goto 1
+A=2⇒Goto 2
+A=3⇒Goto 3
+A=4⇒Goto 4
+Lbl 1
+Vertical 37.5
+Vertical 75
+Vertical 125
+Horizontal 8
+Horizontal 16
+Horizontal 24
+Horizontal 32
+Horizontal 40
+Horizontal 48
+Horizontal 56
+Green Text 1,3,"LIM F(X)"
+Text 9,3,"L"
+Text 17,3,"L"
+Text 25,3,"+INF"
+Green Text 1,44,"LIM G(X)"
+Green Text 1,83,"LIM F+G"
+Text 9,44,"L'"
+Text 9,80,"L+L'"
+Text 17,44,"+INF"
+Text 17,80,"+INF"
+Text 25,44,"+INF"
+Text 25,80,"+INF"
+Text 33,3,"0"
+Text 33,44,"0"
+Text 33,80,"0"
+Text 41,3,"-INF"
+Text 41,44,"-INF"
+Text 41,80,"-INF"
+Text 49,3,"0"
+Text 49,44,"-INF"
+Text 49,80,"-INF"
+Text 57,3,"+INF"
+Text 57,44,"-INF"
+Text 57,80,"?"
+Cls
+Goto 0
+Lbl 2
+ClrGraph
+ViewWindow 0,126,0,0,62,0
+Vertical 37.5
+Vertical 75
+Vertical 125
+Horizontal 8
+Horizontal 16
+Horizontal 24
+Horizontal 32
+Horizontal 48
+Horizontal 56
+Green Text 1,3,"LIM F(X)"
+Text 9,3,"L"
+Text 17,3,"L"
+Text 33,3,"+INF"
+Green Text 1,44,"LIM G(X)"
+Green Text 1,83,"LIM F×G"
+Text 9,44,"L'"
+Text 9,80,"L×L'"
+Text 17,44,"+INF"
+Text 17,80,"+INF si L>0"
+Text 25,80,"-INF si L<0"
+Text 33,44,"+INF"
+Text 33,80,"+INF"
+Text 41,3,"0"
+Text 41,44,"0"
+Text 41,80,"0"
+Text 49,3,"-INF"
+Text 49,44,"-INF"
+Text 49,80,"+INF"
+Text 57,3,"+INF"
+Text 57,44,"-INF"
+Text 57,80,"-INF     ⇒"
+Lbl Î
+ClrGraph
+ViewWindow 0,126,0,0,62,0
+Vertical 37.5
+Vertical 75
+Vertical 125
+Horizontal 40
+Horizontal 48
+Horizontal 56
+Text 9,3,"0"
+Text 17,3,"0"
+Green Text 1,3,"LIM F(X)"
+Green Text 1,44,"LIM G(X)"
+Green Text 1,83,"LIM F×G"
+Text 9,44,"L'"
+Text 9,80,"L×L'"
+Text 17,44,"+-INF"
+Text 17,80,"?"
+Orange Text 57,80,"MENU [EXE]"
+Cls
+Goto 0
+Lbl 3
+ClrGraph
+ViewWindow 0,126,0,0,62,0
+Vertical 37.5
+Vertical 75
+Vertical 125
+Horizontal 32
+Horizontal 40
+Horizontal 48
+Horizontal 56
+Green Text 1,3,"LIM F(X)"
+Text 9,3,"L"
+Text 17,3,"L"
+Text 25,3,"0"
+Green Text 1,44,"LIM G(X)"
+Green Text 1,83,"LIM F÷G"
+Text 9,44,"L'"
+Text 9,80,"L÷L'"
+Text 17,44,"+INF"
+Text 17,80,"0"
+Text 25,44,"L'"
+Text 25,80,"0/L'"
+Text 33,3,"L"
+Text 33,44,"0"
+Text 33,80,"+INF L>0,0+"
+Text 41,79,"-INF L>0,0-"
+Text 49,79,"-INF L<0,0+"
+Text 57,80,"+INF L<0,0-"
+Lbl Î
+ClrGraph
+ViewWindow 0,126,0,0,62,0
+Vertical 37.5
+Vertical 75
+Vertical 125
+Horizontal 24
+Horizontal 32
+Horizontal 40
+Horizontal 56
+Green Text 1,3,"LIM F(X)"
+Text 9,3,"+INF"
+Text 25,3,"0"
+Green Text 1,44,"LIM G(X)"
+Green Text 1,83,"LIM F+G"
+Text 9,44,"0"
+Text 9,80,"+INF SI 0+"
+Text 17,80,"-INF SI 0-"
+Text 25,44,"0"
+Text 25,80,"?"
+Text 33,3,"+-INF"
+Text 33,44,"+-INF"
+Text 33,80,"?"
+Orange Text 57,80,"MENU [EXE]"
+Cls
+Goto 0
+Lbl 4
+ClrGraph
+ViewWindow 0,126,0,0,62,0
+Orange Text 1,1,"Theoreme 1 :"
+Text 7,1,"La limite d'un polynome en +INF"
+Text 13,1,"ou en -INF est egale a la limi"
+Text 19,1,"te du terme de plus haut degre"
+Orange Text 25,1,"Theoreme 2 :"
+Text 31,1,"La limite d'un quotient de poli"
+Text 37,1,"nome en +INF ou -INF est egale"
+Text 43,1,"a la limite du quotient des"
+Text 49,1,"termes de plus haut degre du"
+Text 55,1,"numerateur et du denominateur"
